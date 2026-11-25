@@ -21,8 +21,8 @@ const OUT_DIR = "/output";
 const OUT_FILE = path.join(OUT_DIR, "entry.txt");
 
 function main(): void {
-  // Gate check, same as the competition's sealed scorer: UTF-8 text of
-  // 1 to 200 characters, not only white space.
+  // Gate check, mirroring the competition's sealed scorer: UTF-8 text,
+  // 1–200 characters, and more than whitespace.
   const chars = [...ENTRY].length;
   if (chars < 1 || chars > 200) {
     throw new Error(`entry is ${chars} characters, must be 1-200`);
